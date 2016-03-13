@@ -1,12 +1,14 @@
 
-mean_exrate <- function(x, y, file = "xrates.csv"){
+mean_exrate <- function(x, y, file){
         ## x and y are numeric vectors of length 1 that indicates
         ## two dates (in YYYY-mm-dd format): 
         ## x is the first date of the period of interest
         ## y is the last date of the period of interest
-        ## file is a CSV file with the data in the correct format
-        ## by default it is the file resulting of running the 
-        ## function getTable (previously done) 
+        ## file is character vector of length 1 
+        ## with CSV filename with the data in the correct format
+        ## if you run this function inmediately after running getTable(), then 
+        ## the CSV file is stored in your current wd with the filename
+        ## xrate_"date".csv
         
         ## Defining the period of time
         a <- as.Date(x)

@@ -36,7 +36,9 @@ getTable <- function(url = "http://www.banxico.org.mx/tipcamb/tipCamIHAction.do"
         mydata$ex.rate <- as.numeric(as.character(mydata$ex.rate))
         
         ## Writing and reading again the resulting CSV file
-        write.csv(mydata, file = "xrates.csv")
+        g <- Sys.Date()
+        filename = paste("xrate", "_", g, ".csv", sep = "")
+        write.csv(mydata, file = filename)
 }
         
         
