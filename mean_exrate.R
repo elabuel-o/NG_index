@@ -1,7 +1,7 @@
 
 ### Function: mean_exrate
 ### Returns the mean exchange rate MXN/USD for the specified period.
-### Needs the XML package
+### You do not need additional packages
 
 mean_exrate <- function(x, y, file){
         ## x and y are character vectors of length 1 that indicates
